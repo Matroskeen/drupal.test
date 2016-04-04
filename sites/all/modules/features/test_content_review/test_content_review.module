@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Test Content Review feature.
+ */
+
+include_once 'test_content_review.features.inc';

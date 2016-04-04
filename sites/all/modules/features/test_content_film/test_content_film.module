@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Test Content Film feature.
+ */
+
+include_once 'test_content_film.features.inc';

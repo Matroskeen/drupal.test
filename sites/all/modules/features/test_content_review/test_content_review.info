@@ -1,0 +1,16 @@
+name = Test Content Review
+core = 7.x
+package = Features
+dependencies[] = entityreference
+dependencies[] = features
+dependencies[] = fivestar
+dependencies[] = options
+dependencies[] = text
+features[features_api][] = api:2
+features[field_base][] = body
+features[field_base][] = field_film
+features[field_base][] = field_rating
+features[field_instance][] = node-review-body
+features[field_instance][] = node-review-field_film
+features[field_instance][] = node-review-field_rating
+features[node][] = review
