@@ -12,7 +12,7 @@ function test_content_film_node_info() {
     'film' => array(
       'name' => t('Film'),
       'base' => 'node_content',
-      'description' => t('Content type for describing information about films.'),
+      'description' => t('Nothing'),
       'has_title' => '1',
       'title_label' => t('Title'),
       'help' => '',

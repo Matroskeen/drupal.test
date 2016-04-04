@@ -1,14 +1,6 @@
 <?php
 
 /**
- * Implements hook_init();
- */
-function test_init() {
-  drupal_add_css(drupal_get_path('module', 'test') . '/css/test.fun.css');
-  drupal_add_js(drupal_get_path('module', 'test') . '/js/test.fun.js');
-}
-
-/**
  * Implements the hook_menu();
  */
 function test_menu() {
@@ -20,7 +12,6 @@ function test_menu() {
     'access arguments' => array('administer site configuration'),
     'type' => MENU_CALLBACK,
   );
-
   $items['node/%node/review'] = array (
     'title' => 'Review',
     'page callback' => 'drupal_get_form',
@@ -425,7 +416,7 @@ function test_form_alter(&$form, &$form_state, $form_id) {
       break;
   }
   return $form;
-  
+
 }
 
 function buu($element) {
@@ -437,7 +428,7 @@ function buu($element) {
  * Implements hook_form_FORM_ID_alter().
  */
 function test_form_real_film_node_form_alter(&$form, &$form_state) {
-  
+
 }
 
 /**
