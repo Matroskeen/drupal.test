@@ -1,4 +1,4 @@
-name = Test Main Menu 2
+name = Test Main Menu
 core = 7.x
 package = Features
 dependencies[] = features
