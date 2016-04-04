@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Test Entity Review feature.
+ */
+
+include_once 'test_entity_review.features.inc';

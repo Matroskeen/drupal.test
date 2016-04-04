@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Test Custom Pages feature.
+ */
+
+include_once 'test_custom_pages.features.inc';

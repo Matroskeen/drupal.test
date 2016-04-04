@@ -1,0 +1,9 @@
+name = Test Pages
+core = 7.x
+package = Features
+dependencies[] = ctools
+dependencies[] = page_manager
+features[ctools][] = page_manager:pages_default:1
+features[features_api][] = api:2
+features[page_manager_handlers][] = node_view__panel_context_f690a22b-9b5e-499d-90f5-f100a232e43f
+features[page_manager_handlers][] = term_view__panel_context_a8035b58-24cf-4cb0-a3f5-74aec12b5299

@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Test Image Styles feature.
+ */
+
+include_once 'test_image_styles.features.inc';
