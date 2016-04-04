@@ -1,5 +1,7 @@
 <?php
 /**
  * @file
- * Drupal needs this blank file.
+ * Code for the Test Taxonomy Genre feature.
  */
+
+include_once 'test_taxonomy_genre.features.inc';
