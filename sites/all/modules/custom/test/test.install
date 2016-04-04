@@ -1,0 +1,162 @@
+<?php
+
+/**
+ * Implements hook_schema.
+ */
+function test_schema() {
+  $schema['reviews'] = array(
+    'description' => 'The table for reviews.',
+    'fields' => array(
+      'id' => array(
+        'description' => 'The primary identifier for a node.',
+        'type' => 'serial',
+        'size' => 'big',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+      ),
+      'mark' => array(
+        'type' => 'int',
+        'size' => 'tiny',
+        'not null' => TRUE,
+      ),
+      'impression' => array(
+        'type' => 'text',
+        'size' => 'medium',
+        'not null' => TRUE,
+      ),
+      'cool' => array(
+        'type' => 'varchar',
+        'length' => '1',
+        'not null' => TRUE,
+      ),
+      'film_id' => array(
+        'type' => 'int',
+        'size' => 'big',
+        'not null' => TRUE,
+      )
+    ),
+    'primary key' => array('id'),
+  );
+
+  $schema['review_entity'] = array(
+    'description' => 'The table for entity-reviews.',
+    'fields' => array(
+      'id' => array(
+        'description' => 'The primary identifier for a review.',
+        'type' => 'serial',
+        'size' => 'big',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+      ),
+      'mark' => array(
+        'type' => 'int',
+        'size' => 'tiny',
+        'not null' => TRUE,
+      ),
+      'impression' => array(
+        'type' => 'text',
+        'size' => 'medium',
+        'not null' => TRUE,
+      ),
+      'cool' => array(
+        'type' => 'varchar',
+        'length' => '1',
+        'not null' => TRUE,
+      ),
+      'film_id' => array(
+        'type' => 'int',
+        'size' => 'big',
+        'not null' => TRUE,
+      )
+    ),
+    'primary key' => array('id'),
+  );
+  return $schema;
+}
+
+/**
+ * Add cool field to {reviews} table.
+ */
+
+function test_update_7001() {
+  $schema = array(
+    'description' => 'The table for reviews.',
+    'fields' => array(
+      'id' => array(
+        'description' => 'The primary identifier for a node.',
+        'type' => 'serial',
+        'size' => 'big',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+      ),
+      'mark' => array(
+        'type' => 'int',
+        'size' => 'tiny',
+        'not null' => TRUE,
+      ),
+      'impression' => array(
+        'type' => 'text',
+        'size' => 'medium',
+        'not null' => TRUE,
+      ),
+      'cool' => array(
+        'type' => 'varchar',
+        'length' => '1',
+        'not null' => TRUE,
+      ),
+      'film_id' => array(
+        'type' => 'int',
+        'size' => 'big',
+        'not null' => TRUE,
+      )
+    ),
+    'primary key' => array('id'),
+  );
+
+  if (!db_table_exists('reviews')) {
+    db_create_table('reviews', $schema);
+  }
+}
+
+/**
+ * Add new table for the test Entity.
+ */
+function test_update_7002() {
+  $schema = array(
+    'description' => 'The table for entity reviews.',
+    'fields' => array(
+      'id' => array(
+        'description' => 'The primary identifier for a review.',
+        'type' => 'serial',
+        'size' => 'big',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+      ),
+      'mark' => array(
+        'type' => 'int',
+        'size' => 'tiny',
+        'not null' => TRUE,
+      ),
+      'impression' => array(
+        'type' => 'text',
+        'size' => 'medium',
+        'not null' => TRUE,
+      ),
+      'cool' => array(
+        'type' => 'varchar',
+        'length' => '1',
+        'not null' => TRUE,
+      ),
+      'film_id' => array(
+        'type' => 'int',
+        'size' => 'big',
+        'not null' => TRUE,
+      )
+    ),
+    'primary key' => array('id'),
+  );
+
+  if (!db_table_exists('review_entity')) {
+    db_create_table('review_entity', $schema);
+  }
+}

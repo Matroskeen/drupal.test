@@ -1,0 +1,15 @@
+diff --git a/eck.entity.inc b/eck.entity.inc
+index 964461e..2c322e4 100755
+--- a/eck.entity.inc
++++ b/eck.entity.inc
+@@ -424,8 +424,9 @@ function eck__entity__form_validate($form, &$state) {
+  */
+ function eck__entity__form_submit($form, &$state) {
+   $entity = $state['values']['entity'];
++  unset($state['values']['entity']);
+ 
+-  field_attach_submit($entity->entityType(), $entity, $form, $state);
++  entity_form_submit_build_entity($entity->entityType(), $entity, $form, $state);
+ 
+   $entity_type = $entity->entityType();
+   $entity_type = EntityType::loadByName($entity_type);
